@@ -1,0 +1,69 @@
+h1{
+    text-align: center;
+    color:  whitesmoke;
+    
+ }
+ body{
+    background-color: #656565;
+ }
+ 
+ .container{
+     background-color: rgb(25, 26, 24); 
+    display: flex;
+    width: 700px;
+    height: 500px;
+    margin:auto;
+    border: 2px black solid; 
+    border-radius: 60px;
+ 
+ }
+ 
+ .key{
+    cursor: pointer;    
+   
+ }
+ 
+ .key.white:hover{
+    background: linear-gradient(to top, #ccc 10%, #fff 50%);
+ }
+ 
+ .key.black:hover{
+    background: linear-gradient(to top, #040404 10%, #656565 50%);
+ }
+ 
+ 
+ 
+ .key.white{
+    background-color: white;
+    height: 400px;
+    width: 220px;
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 0px 0px 2px 2px;
+    
+ }
+ 
+ .key.white p{
+    text-align: center;
+    margin-top: 300%;
+ }
+ .key.black{
+    background-color: black;
+    border-radius: 3px 3px 10px 10px;
+    height: 300px;
+    width: 150px;
+    position: relative;
+    z-index: 2;
+    margin: 50px -32px 0px -32px;
+ }
+ 
+ 
+ .key.black p{
+    text-align: center;
+    margin-top: 400%;
+    color: white;
+ }
+ 
+ 
+ 
+ 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../piano_assessment/style.css">
+    <title>Piano Assignment</title>
+</head>
+<body>
+    <h1>Ada piano assessment</h1>
+    <div class="container">
+        <div class="key white" data-note="C">
+            <p>C</p>
+        </div>
+        <div class="key black" data-note="C#,Db">
+            <p>C#</p>
+    
+        </div>
+        <div class="key white" data-note="D">
+            <P>D</P>
+        </div>
+        <div class="key black" data-note="D#,Eb">
+            <p>D#</p>
+        </div>
+        <div class="key white" data-note="E">
+         <p>E</p>
+        </div>
+        <div class="key white" data-note="F">
+            <p>F</p>
+        </div>
+        <div class="key black" data-note="F#,Gb">
+            <p>F#</p>
+        </div>
+        <div class="key white" data-note="G">
+            <p>G</p>
+        </div>
+        <div class="key black" data-note="G#,Ab">
+            <p>G#</p>
+        </div>
+        <div class="key white" data-note="A">
+            <p>A</p>
+        </div>
+        <div class="key black" data-note="A#,Bb">
+            <p>A#</p>
+        </div>
+        <div class="key white" data-note="B">
+            <p>B</p>
+        </div>
+    </div>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const keys = document.querySelectorAll('.key');
+    
+    keys.forEach(key => {
+        key.addEventListener('click', () => playSound(key.dataset.note));
+    });
+
+    document.addEventListener('keydown', function (event) {
+        const key = event.key.toUpperCase();
+        const keyElement = document.querySelector(`.key[data-note="${key}"]`);
+        
+        if (keyElement) {
+            keyElement.classList.add('active');
+            playSound(key);
+        }
+    });
+
+    document.addEventListener('keyup', function (event) {
+        const key = event.key.toUpperCase();
+        const keyElement = document.querySelector(`.key[data-note="${key}"]`);
+        
+        if (keyElement) {
+            keyElement.classList.remove('active');
+        }
+    });
+
+    function playSound(note) {
+        const audio = new Audio(`../piano_assessment/audio/${note}.mp3`);
+        
+        
+        audio.play();
+    }
+    function playSound(note) {
+    console.log(`Playing sound for note: ${note}`);
+    const audio = new Audio(`../piano_assessment/audio/${note}.mp3`);
+    
+    audio.play();
+}
+
+
+});
+
+    </script>
+</body>
+</html>
