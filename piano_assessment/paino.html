@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../piano_assessment/style.css">
+    </head>
+    <body>
+        <h1>Ada piano assessment</h1>
+        <div class="container">
+            <div class="key white" data-note="C" onclick="playNote('../piano_assessment/audio/C.mp3')">
+                <p>C</p>
+            </div>
+            <div class="key black" data-note="C#" onclick="playNote('../piano_assessment/audio/Cc.mp3')">
+                <p>C#</p>
+        
+            </div>
+            <div class="key white" data-note="D" onclick="playNote('../piano_assessment/audio/D.mp3')">
+                <P>D</P>
+            </div>
+            <div class="key black" data-note="D#" onclick="playNote('../piano_assessment/audio/Dd.mp3')">
+                <p>D#</p>
+            </div>
+            <div class="key white" data-note="E" onclick="playNote('../piano_assessment/audio/E.mp3')">
+             <p>E</p>
+            </div>
+            <div class="key white" data-note="F" onclick="playNote('../piano_assessment/audio/F.mp3')">
+                <p>F</p>
+            </div>
+            <div class="key black" data-note="F#" onclick="playNote('../piano_assessment/audio/Ff.mp3')">
+                <p>F#</p>
+            </div>
+            <div class="key white" data-note="G" onclick="playNote('../piano_assessment/audio/G.mp3')">
+                <p>G</p>
+            </div>
+            <div class="key black" data-note="G#" onclick="playNote('../piano_assessment/audio/Gg.mp3')">
+                <p>G#</p>
+            </div>
+            <div class="key white" data-note="A" onclick="playNote('../piano_assessment/audio/A.mp3')">
+                <p>A</p>
+            </div>
+            <div class="key black" data-note="A#" onclick="playNote('../piano_assessment/audio/Ab.mp3')">
+                <p>A#</p>
+            </div>
+            <div class="key white" data-note="B" onclick="playNote('../piano_assessment/audio/B.mp3')">
+                <p>B</p>
+            </div>
+        </div>
+        
+        <script>
+            function playNote(noteSrc){
+                let audio = new Audio(noteSrc)
+                audio.play()
+            }
+        </script>
+    </body>
+</html>
